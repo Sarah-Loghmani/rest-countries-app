@@ -9,7 +9,7 @@ function Filter() {
             type="search"
             name="search"
             id="search"
-            placeholder="Search for a country"
+            placeholder= "Search for a country"
             autoComplete="off"
           />
         </form>
