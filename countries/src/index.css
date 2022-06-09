@@ -18,22 +18,24 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: rgb(90, 88, 88);
-   padding: 8px;
+   padding: 8px 18px;
+   border-radius: 5px;
 }
 /* filter */
 .filter {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   justify-content: space-between;
   padding: 20px 0;
+
 }
 .filter .form-control{
   width: 100%;
 }
 .filter .form-control input{
   background-color: rgb(90, 88, 88);
-  padding: 8px;
+  padding: 12px 18px;
   border:none;
   outline: none;
   border-radius: 5px;
@@ -47,21 +49,18 @@ body {
   color:white;
 }
 
-.filter .region-filter{
-  width: 100%;
-
-}
-
-.filter .region-filter .select{
+.filter .region-filter .select {
   background-color: rgb(90, 88, 88);
   color: white;
-  padding:8px;
+  padding:12px 18px;
   border:none;
   outline: none;
   border-radius: 5px;
   letter-spacing: 0.5px;
-  width: 250px;
+  width: 200px;
   font-family: inherit;
+  margin:0 0 30px;
+
 
 }
 .filter #select option{
@@ -108,6 +107,16 @@ body {
 }
 
 @media (min-width: 768px) {
+  .filter{
+    flex-direction:row;
+  }
+  .filter .form-control input{
+    width:375px;
+
+  }
+  .filter .region-filter{
+    width: auto;
+  }
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
