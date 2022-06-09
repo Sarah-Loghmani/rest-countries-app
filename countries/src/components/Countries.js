@@ -21,7 +21,7 @@ const Countries = () => {
             country;
           return (
             <article key={numericCode}>
-              <div>
+              <div className="card">
                 <img src={flag} alt={name} />
                 <div className="details">
                   <h3>{name}</h3>
