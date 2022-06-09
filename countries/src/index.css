@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+:root {
+  /* dark mood */
+  --dark-bg-c: rgb(32, 45, 54);
+  --dark-card: rgb(70, 74, 83);
+  --light-text: white;
+  --dark-shadow:rgba(5, 15, 22, 0.5);
+  /* light mood */
+  --light-bg-c:#FAFAFA;
+  --light-card: #FFFFFF;
+  --dark-text: black;
+  --light-shadow: rgba(75, 80, 84, 0.5);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,15 +22,15 @@
 body {
   font-family: "Nunito", sans-serif;
   padding: 30px;
-  background-color: rgb(69, 68, 68);
-  color: white;
+  background-color: var(--dark-bg-c);
+  color: var(--light-text);
 }
 /* Header */
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: rgb(90, 88, 88);
+  background-color: var(--dark-card);
    padding: 8px 18px;
    border-radius: 5px;
 }
@@ -34,24 +47,24 @@ body {
   width: 100%;
 }
 .filter .form-control input{
-  background-color: rgb(90, 88, 88);
+  background-color: var(--dark-card);
   padding: 12px 18px;
   border:none;
   outline: none;
   border-radius: 5px;
-  color:white;
+  color:var(--light-text);
   font-family: inherit;
   letter-spacing: 0.5px;
   width: 100%;
   margin:0 0 30px;
 }
 .filter .form-control input::placeholder{
-  color:white;
+  color:var(--light-text);
 }
 
 .filter .region-filter .select {
-  background-color: rgb(90, 88, 88);
-  color: white;
+  background-color: var(--dark-card);
+  color: var(--light-text);
   padding:12px 18px;
   border:none;
   outline: none;
@@ -64,12 +77,12 @@ body {
 
 }
 .filter #select option{
-  background-color: rgb(90, 88, 88);
-  color: white;
+  background-color: var(--dark-card);
+  color: var(--light-text);
   padding:10px;
 
 }
-/* Grid */
+/* cards */
 
 .grid {
   display: grid;
@@ -77,7 +90,7 @@ body {
   gap: 40px;
 }
 .grid article {
-  box-shadow: 0 10px 10px rgba(32, 45, 54, 0.5);
+  box-shadow: 0 10px 10px var(--dark-shadow);
 }
 .grid article img {
   border-radius: 5px 5px 0 0;
@@ -85,7 +98,7 @@ body {
   width: 100%;
 }
 .grid .details {
-  background-color: rgb(90, 88, 88);
+  background-color: var(--dark-card);
   padding: 40px 20px;
   margin-top: -20px;
   border-radius: 5px;
