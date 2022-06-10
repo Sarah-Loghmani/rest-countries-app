@@ -1,0 +1,14 @@
+.country{
+    padding:80px 30px;
+    /* display: flex; */
+}
+
+.backLink{
+  background-color: var(--dark-card);
+  position: absolute;
+  margin-top: 30px;
+  display:inline-block;
+}
+.country img{
+    width: 50%
+}
