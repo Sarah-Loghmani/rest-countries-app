@@ -17,6 +17,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* color:var(--light-text) */
 }
 
 body {
@@ -52,7 +53,7 @@ body {
   border:none;
   outline: none;
   border-radius: 5px;
-  color:var(--light-text);
+  /* color:var(--light-text); */
   font-family: inherit;
   letter-spacing: 0.5px;
   width: 100%;
@@ -131,11 +132,7 @@ body {
   position: relative;
   left:240px;
 }
-.backLink{
-  background-color: var(--dark-card);
-  position: absolute;
-  margin-top: 30px;
-}
+
 
 @media (min-width: 640px) {
   .grid {
