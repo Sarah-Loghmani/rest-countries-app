@@ -1,18 +1,13 @@
 import React, { useState, useEffect } from "react";
 import {Link} from "react-router-dom"
 
-// const url = `../data.json`;
+const url = `https://restcountries.com/v2/all`;
 
 const Countries = () => {
   const [countries, setCountries] = useState([]);
   const fetchCountryData = async () => {
     try {
-      const response = await fetch("../data.json", {
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-        },
-      });
+      const response = await fetch(url);
       console.log(response);
       const countries = await response.json();
       console.log(countries);
