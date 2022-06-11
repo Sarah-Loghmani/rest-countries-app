@@ -8,9 +8,9 @@ const Countries = () => {
   const fetchCountryData = async () => {
     try {
       const response = await fetch(url);
-      console.log(response);
+      // console.log(response);
       const countries = await response.json();
-      console.log(countries);
+      // console.log(countries);
       setCountries(countries);
       
     } catch (error) {
