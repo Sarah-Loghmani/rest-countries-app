@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
-import '../country.css';
+import "../country.css";
 
 const Country = () => {
   const [country, setCountry] = useState([]);
@@ -18,11 +18,10 @@ const Country = () => {
   }, [url]);
   return (
     <>
-      <Link to="/" className="link backLink">
-        Back 
-      </Link>
-
       <section className="country">
+        <Link to="/" className="link backLink">
+          Back to countries
+        </Link>
         {country.map((ele) => {
           const {
             numericCode,
@@ -38,13 +37,14 @@ const Country = () => {
             languages,
             borders,
           } = ele;
+          console.log(borders);
           return (
             <article key={numericCode}>
-              <div>
+              <div className="flag">
                 <img src={flag} alt={name} />
               </div>
 
-              <div className="country-detail">
+              <div className="country-details">
                 <h2>{name}</h2>
                 <div className="left-side">
                   <h5>
@@ -66,7 +66,7 @@ const Country = () => {
 
                 <div className="right-side">
                   <h5>
-                    Top Level Domain: <span>{topLevelDomain}</span>
+                    Top Level Domain: <span> {topLevelDomain}</span>
                   </h5>
                   <h5>
                     Currencies: <span>{currencies[0].code}</span>
@@ -79,12 +79,8 @@ const Country = () => {
                 <div className="bottom-side">
                   <h5>Border Countries: </h5>
                   <ul>
-                    {borders.map((border, index) => {
-                      return (
-                        <article>
-                          <li key={index}>{border}</li>
-                        </article>
-                      );
+                    {borders.map((border) => {
+                      return <li key={border}>{border}</li>;
                     })}
                   </ul>
                 </div>
