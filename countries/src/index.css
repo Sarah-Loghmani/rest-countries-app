@@ -5,10 +5,10 @@
   --dark-bg-c: rgb(32, 45, 54);
   --dark-card: rgb(70, 74, 83);
   --light-text: white;
-  --dark-shadow:rgba(5, 15, 22, 0.5);
+  --dark-shadow: rgba(5, 15, 22, 0.5);
   /* light mood */
-  --light-bg-c:#FAFAFA;
-  --light-card: #FFFFFF;
+  --light-bg-c: #fafafa;
+  --light-card: #ffffff;
   --dark-text: black;
   --light-shadow: rgba(75, 80, 84, 0.5);
 }
@@ -17,12 +17,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* color:var(--light-text) */
 }
 
 body {
   font-family: "Nunito", sans-serif;
-  padding: 30px;
   background-color: var(--dark-bg-c);
   color: var(--light-text);
 }
@@ -32,9 +30,14 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: var(--dark-card);
-   padding: 8px 18px;
-   border-radius: 5px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  /* margin: 0px 30px; */
 }
+.header h1 {
+  font-size: vMinSize;
+}
+
 /* filter */
 .filter {
   display: flex;
@@ -42,46 +45,42 @@ body {
   /* align-items: center; */
   justify-content: space-between;
   padding: 20px 0;
-
 }
-.filter .form-control{
+.filter .form-control {
   width: 100%;
 }
-.filter .form-control input{
+.filter .form-control input {
   background-color: var(--dark-card);
   padding: 12px 18px;
-  border:none;
+  border: none;
   outline: none;
   border-radius: 5px;
   /* color:var(--light-text); */
   font-family: inherit;
   letter-spacing: 0.5px;
   width: 100%;
-  margin:0 0 30px;
+  margin: 0 0 30px;
 }
-.filter .form-control input::placeholder{
-  color:var(--light-text);
+.filter .form-control input::placeholder {
+  color: var(--light-text);
 }
 
 .filter .region-filter .select {
   background-color: var(--dark-card);
   color: var(--light-text);
-  padding:12px 18px;
-  border:none;
+  padding: 12px 18px;
+  border: none;
   outline: none;
   border-radius: 5px;
   letter-spacing: 0.5px;
   width: 200px;
   font-family: inherit;
-  margin:0 0 30px;
-
-
+  margin: 0 0 30px;
 }
-.filter #select option{
+.filter #select option {
   background-color: var(--dark-card);
   color: var(--light-text);
-  padding:10px;
-
+  padding: 10px;
 }
 /* cards */
 
@@ -122,17 +121,16 @@ body {
   text-decoration: none;
   padding: 5px;
   border-radius: 4px;
-  transition:background-color 1s;
+  transition: background-color 1s;
 }
-.link:hover{
+.link:hover {
   background-color: var(--light-bg-c);
-  color: var(--dark-text)
+  color: var(--dark-text);
 }
 .grid .details .link {
   position: relative;
-  left:240px;
+  left: 240px;
 }
-
 
 @media (min-width: 640px) {
   .grid {
@@ -141,26 +139,34 @@ body {
 }
 
 @media (min-width: 768px) {
-  .filter{
-    flex-direction:row;
+  .filter {
+    flex-direction: row;
   }
-  .filter .form-control input{
-    width:375px;
-
+  .filter .form-control input {
+    width: 375px;
   }
-  .filter .region-filter{
+  .filter .region-filter {
     width: auto;
   }
   .grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
 @media (min-width: 992px) {
-  body {
-    padding: 50px 100px;
+  .filter,
+  .grid {
+    padding: 50px 90px 5px;
   }
   .grid {
     /* grid-template-columns: repeat(4, 1fr); */
     gap: 60px;
+  }
+  .header {
+    padding: 30px;
+  }
+  .grid .details .link {
+    position: relative;
+    left: 240px;
   }
 }
