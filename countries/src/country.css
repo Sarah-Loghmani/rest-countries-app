@@ -7,13 +7,14 @@
   background-color: var(--dark-card);
   margin: 0px 0 20px 0;
   display: inline-block;
+  font-size: 3vmin;
 }
 .country img {
   width: 100%;
 }
 
 .country article .country-details div {
-  margin-top: 20px;
+  margin-top: 50px;
 }
 .country article .country-details div h5 span {
   font-weight: 300;
@@ -40,9 +41,17 @@
 
 @media (min-width: 922px) {
   .country {
-    padding: 50px 90px;
+    padding: 50px 40px;
   }
   .backLink {
     margin: 0px 0 50px 0;
+  }
+  .country img {
+    width: 50%;
+  }
+  .country-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5;
   }
 }
