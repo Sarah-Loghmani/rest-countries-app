@@ -45,8 +45,8 @@ const Country = () => {
               </div>
 
               <div className="country-details">
-                <h2>{name}</h2>
                 <div className="left-side">
+                  <h2>{name}</h2>
                   <h5>
                     Native Name: <span>{nativeName}</span>
                   </h5>
