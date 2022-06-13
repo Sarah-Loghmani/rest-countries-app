@@ -9,7 +9,8 @@ function Headers() {
         </div>
 
         <div>
-          <i className="fas fa-moon"></i>Dark Mood
+          <i className="fas fa-moon"></i>
+          <span className="dark-mood">Dark Mood</span>
         </div>
       </header>
     </>
