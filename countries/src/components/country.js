@@ -12,7 +12,7 @@ const Country = () => {
       const response = await fetch(`https://restcountries.com/v2/name/${name}`);
       const country = await response.json();
       setCountry(country);
-      console.log(country);
+      // console.log(country);
     };
     fetchCountryData();
   }, [name]);
@@ -38,7 +38,7 @@ const Country = () => {
             languages,
             borders,
           } = ele;
-          console.log(borders);
+          // console.log(borders);
           return (
             <article key={numericCode}>
               {/* image */}
