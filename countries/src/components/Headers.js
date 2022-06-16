@@ -21,8 +21,6 @@ function Headers() {
     // console.log(sun);
     sun.addEventListener("click", () => {
       i.classList.toggle("fa-sun");
-      i.classList.toggle("fa-moon");
-
       // iSpan.classList.toggle("lightSpan")
       // iSpan.classList.toggle("darkSpan");
       document.body.classList.toggle("light-mood");
