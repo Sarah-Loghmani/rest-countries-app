@@ -16,14 +16,18 @@ function Headers() {
     const regionFilter = document.querySelector(
       ".filter .region-filter select"
     );
-    const regionOptions = document.getElementsByName("option");
+    const regionOptions = document.querySelectorAll("option");
     const cardsDetails = document.querySelectorAll(".grid .details");
+    // country
+    const borders = document.querySelectorAll(
+      ".country article .borders ul li"
+    );
 
     // console.log(sun);
     sun.addEventListener("click", () => {
-      i.classList.value === "fas fa-sun"
-        ? (i.classList.value = "fas fa-moon")
-        : (i.classList.value = "fas fa-sun");
+      i.classList.value !== "fas fa-sun"
+        ? (i.classList.value = "fas fa-sun")
+        : (i.classList.value = "fas fa-moon");
       // iSpan.classList.toggle("lightSpan")
       // iSpan.classList.toggle("darkSpan");
       document.body.classList.toggle("light-mood");
@@ -36,9 +40,13 @@ function Headers() {
       cardsDetails.forEach((detail) => {
         detail.classList.toggle("light-mood");
       });
-       cards.forEach((card) => {
-         card.classList.toggle("light-mood");
-       });
+      cards.forEach((card) => {
+        card.classList.toggle("light-mood");
+      });
+      // country
+      borders.forEach((border) => {
+        border.classList.toggle("light-mood");
+      });
     });
   };
   return (

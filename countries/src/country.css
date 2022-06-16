@@ -38,6 +38,11 @@
   margin: 10px;
   box-shadow: 0 5px 8px var(--dark-shadow);
 }
+.country article .borders ul li.light-mood {
+  background-color: var(--light-card);
+  color:var(--dark-text);
+  box-shadow: 0 5px 8px var(--light-shadow);
+}
 
 @media (min-width: 922px) {
   .country {

@@ -50,48 +50,46 @@ const Country = () => {
               <div className="country-details">
                 <div className="title">
                   <h2>{name}</h2>
+                </div>
+                <div className="details">
+                  <div className="left-side">
+                    <h5>
+                      Native Name: <span>{nativeName}</span>
+                    </h5>
+                    <h5>
+                      Population: <span>{population}</span>
+                    </h5>
+                    <h5>
+                      Region: <span>{region}</span>
+                    </h5>
+                    <h5>
+                      Sub Region: <span>{subregion}</span>
+                    </h5>
+                    <h5>
+                      Capital: <span>{capital}</span>
+                    </h5>
+                  </div>
 
+                  <div>
+                    <h5>
+                      Top Level Domain: <span> {topLevelDomain}</span>
+                    </h5>
+                    <h5>
+                      Currencies: <span>{currencies[0].code}</span>
+                    </h5>
+                    <h5>
+                      Languages: <span>{languages[0].name}</span>
+                    </h5>
+                  </div>
+                  <div className="borders">
+                    <h5>Border Countries: </h5>
+                    <ul>
+                      {borders.map((border) => {
+                        return <li key={border}>{border}</li>;
+                      })}
+                    </ul>
+                  </div>
                 </div>
-                <dive className="details">
-
-                <div className="left-side">
-                  <h5>
-                    Native Name: <span>{nativeName}</span>
-                  </h5>
-                  <h5>
-                    Population: <span>{population}</span>
-                  </h5>
-                  <h5>
-                    Region: <span>{region}</span>
-                  </h5>
-                  <h5>
-                    Sub Region: <span>{subregion}</span>
-                  </h5>
-                  <h5>
-                    Capital: <span>{capital}</span>
-                  </h5>
-                </div>
-
-                <div>
-                  <h5>
-                    Top Level Domain: <span> {topLevelDomain}</span>
-                  </h5>
-                  <h5>
-                    Currencies: <span>{currencies[0].code}</span>
-                  </h5>
-                  <h5>
-                    Languages: <span>{languages[0].name}</span>
-                  </h5>
-                </div>
-                <div className="borders">
-                  <h5>Border Countries: </h5>
-                  <ul>
-                    {borders.map((border) => {
-                      return <li key={border}>{border}</li>;
-                    })}
-                  </ul>
-                </div>
-                </dive>
               </div>
             </article>
           );
