@@ -47,11 +47,16 @@
     margin: 0px 0 50px 0;
   }
   .country img {
-    width: 50%;
+    width: 30%;
   }
-  .country-details {
+  /* .country-details {
     display: flex;
     flex-wrap: wrap;
-    gap: 5;
+    gap: 5px;
+  } */
+  .country-details article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
