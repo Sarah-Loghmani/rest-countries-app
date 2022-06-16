@@ -10,7 +10,7 @@
   --light-bg-c: #fafafa;
   --light-card: #ffffff;
   --dark-text: black;
-  --light-shadow: rgba(75, 80, 84, 0.5);
+  --light-shadow: rgba(206, 210, 214, 0.5);
 }
 
 * {
@@ -25,8 +25,9 @@ body {
   color: var(--light-text);
 }
 
-body.light-mood{
-  background-color: var(--light-bg-c)
+body.light-mood {
+  background-color: var(--light-bg-c);
+  color: var(--dark-text);
 }
 /* Header */
 .header {
@@ -35,13 +36,25 @@ body.light-mood{
   justify-content: space-between;
   background-color: var(--dark-card);
   padding: 8px 15px;
-  border-radius: 5px;
+  /* border-radius: 5px; */
   /* margin: 0px 30px; */
+}
+header.light-mood {
+  background-color: var(--light-card);
+  color: var(--dark-text);
+  box-shadow: 0 10px 10px var(--light-shadow);
 }
 .header h1 {
   font-size: 5vmin;
 }
-.dark-mood span {
+.dark-mood {
+  cursor: pointer;
+  font-size: 2.2vmin;
+}
+.dark-mood span.lightSpan {
+  display: none;
+}
+.dark-mood span.darkSpan {
   display: none;
 }
 
@@ -53,10 +66,10 @@ body.light-mood{
   justify-content: space-between;
   padding: 20px 0;
 }
-.filter .form-control {
+.filter .form {
   width: 100%;
 }
-.filter .form-control input {
+.filter .form input {
   background-color: var(--dark-card);
   padding: 12px 18px;
   border: none;
@@ -68,8 +81,15 @@ body.light-mood{
   width: 100%;
   margin: 0 0 30px;
 }
-.filter .form-control input::placeholder {
+.filter .form input.light-mood {
+  background-color: var(--light-card);
+  box-shadow: 0 10px 10px var(--light-shadow);
+}
+.filter .form input::placeholder {
   color: var(--light-text);
+}
+.filter .form input.light-mood::placeholder {
+  color: var(--dark-text);
 }
 
 .filter .region-filter .select {
@@ -84,10 +104,19 @@ body.light-mood{
   font-family: inherit;
   margin: 0 0 30px;
 }
-.filter #select option {
+.filter .region-filter .select.light-mood {
+  background-color: var(--light-card);
+  box-shadow: 0 10px 10px var(--light-shadow);
+  color: var(--dark-text);
+}
+.filter .select option {
   background-color: var(--dark-card);
   color: var(--light-text);
-  padding: 10px;
+  padding: 10px 20px;
+}
+.filter .select option.light-mood {
+  background-color: var(--light-card);
+  color: var(--dark-text);
 }
 /* cards */
 
@@ -105,10 +134,15 @@ body.light-mood{
   height: 250px;
   width: 100%;
 }
-.grid .details {
+.grid .card .details {
   background-color: var(--dark-card);
   padding: 40px 20px;
   margin-top: -20px;
+  border-radius: 5px;
+}
+.grid .card .details.light-mood {
+  background-color: var(--light-card);
+  color: var(--dark-text);
   border-radius: 5px;
 }
 
@@ -134,10 +168,10 @@ body.light-mood{
   background-color: var(--light-bg-c);
   color: var(--dark-text);
 }
-.grid .details .link {
+/* .grid .details .link {
   position: relative;
   left: 240px;
-}
+} */
 
 @media (min-width: 640px) {
   .grid {
@@ -153,7 +187,7 @@ body.light-mood{
   .filter {
     flex-direction: row;
   }
-  .filter .form-control input {
+  .filter .form input {
     width: 375px;
   }
   .filter .region-filter {
@@ -174,7 +208,7 @@ body.light-mood{
     gap: 60px;
   }
   .header {
-    padding: 30px;
+    padding: 30px 90px;
   }
   .grid .details .link {
     position: relative;
