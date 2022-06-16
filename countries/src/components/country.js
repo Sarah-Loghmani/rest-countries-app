@@ -46,9 +46,15 @@ const Country = () => {
                 <img src={flag} alt={name} />
               </div>
               {/* details */}
+
               <div className="country-details">
-                <div className="left-side">
+                <div className="title">
                   <h2>{name}</h2>
+
+                </div>
+                <dive className="details">
+
+                <div className="left-side">
                   <h5>
                     Native Name: <span>{nativeName}</span>
                   </h5>
@@ -65,7 +71,7 @@ const Country = () => {
                     Capital: <span>{capital}</span>
                   </h5>
                 </div>
-                
+
                 <div>
                   <h5>
                     Top Level Domain: <span> {topLevelDomain}</span>
@@ -77,8 +83,7 @@ const Country = () => {
                     Languages: <span>{languages[0].name}</span>
                   </h5>
                 </div>
-
-                <div className="bottom-side">
+                <div className="borders">
                   <h5>Border Countries: </h5>
                   <ul>
                     {borders.map((border) => {
@@ -86,6 +91,7 @@ const Country = () => {
                     })}
                   </ul>
                 </div>
+                </dive>
               </div>
             </article>
           );
