@@ -128,19 +128,22 @@ header.light-mood {
 .grid article {
   box-shadow: 0 10px 10px var(--dark-shadow);
 }
+.grid article.light-mood {
+  box-shadow: 0 10px 10px var(--light-shadow);
+}
 
 .grid article img {
   border-radius: 5px 5px 0 0;
   height: 250px;
   width: 100%;
 }
-.grid .card .details {
+.grid article .details {
   background-color: var(--dark-card);
   padding: 40px 20px;
   margin-top: -20px;
   border-radius: 5px;
 }
-.grid .card .details.light-mood {
+.grid article .details.light-mood {
   background-color: var(--light-card);
   color: var(--dark-text);
   border-radius: 5px;
@@ -168,10 +171,10 @@ header.light-mood {
   background-color: var(--light-bg-c);
   color: var(--dark-text);
 }
-/* .grid .details .link {
-  position: relative;
-  left: 240px;
-} */
+.grid .details .link {
+  display: inline-block;
+  margin-top: 20px;
+}
 
 @media (min-width: 640px) {
   .grid {
@@ -210,8 +213,8 @@ header.light-mood {
   .header {
     padding: 30px 90px;
   }
-  .grid .details .link {
+  /* .grid .details .link {
     position: relative;
     left: 240px;
-  }
+  } */
 }
