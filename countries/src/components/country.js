@@ -5,23 +5,24 @@ import "../country.css";
 const Country = () => {
   const [country, setCountry] = useState([]);
   const { name } = useParams();
-  const url = `https://restcountries.com/v2/name/${name}`;
+  // const url = `https://restcountries.com/v2/name/${name}`;
 
   useEffect(() => {
     const fetchCountryData = async () => {
-      const response = await fetch(url);
+      const response = await fetch(`https://restcountries.com/v2/name/${name}`);
       const country = await response.json();
       setCountry(country);
       console.log(country);
     };
     fetchCountryData();
-  }, [url]);
+  }, [name]);
   return (
     <>
       <section className="country">
         <Link to="/" className="link backLink">
           Back to countries
         </Link>
+
         {country.map((ele) => {
           const {
             numericCode,
@@ -40,10 +41,11 @@ const Country = () => {
           console.log(borders);
           return (
             <article key={numericCode}>
+              {/* image */}
               <div className="flag">
                 <img src={flag} alt={name} />
               </div>
-
+              {/* details */}
               <div className="country-details">
                 <div className="left-side">
                   <h2>{name}</h2>
@@ -63,8 +65,8 @@ const Country = () => {
                     Capital: <span>{capital}</span>
                   </h5>
                 </div>
-
-                <div className="right-side">
+                
+                <div>
                   <h5>
                     Top Level Domain: <span> {topLevelDomain}</span>
                   </h5>
