@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const url = `https://restcountries.com/v2/all`;
 
@@ -12,7 +12,6 @@ const Countries = () => {
       const countries = await response.json();
       // console.log(countries);
       setCountries(countries);
-      
     } catch (error) {
       console.log(error);
     }
@@ -34,7 +33,7 @@ const Countries = () => {
                 <div className="details">
                   <h3>{name}</h3>
                   <h4>
-                    population: <span>{population}</span>{" "}
+                    population: <span>{population}</span>
                   </h4>
                   <h4>
                     Region: <span> {region}</span>
@@ -42,7 +41,9 @@ const Countries = () => {
                   <h4>
                     Capital: <span> {capital}</span>
                   </h4>
-                  <Link to={`/Countries/${name}`} className="link">More details</Link>
+                  <Link to={`/Countries/${name}`} className="link">
+                    More details
+                  </Link>
                 </div>
               </div>
             </article>
