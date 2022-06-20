@@ -1,26 +1,22 @@
 import React,{useState} from "react";
-// import "../index.css";
 
 function Filter() {
 const [input, setInput]= useState("")
 
 
-  // const input = document.querySelector(".filter searchDiv input");
-  // console.log(input);
 
-  // input.addEventListener("keyup", (e) => {
-    // const value = e.target.value;
-    // const { value } = e.target;
-    // console.log(value);
     const countryName = document.querySelectorAll(".country-name");
-    const handleInput = (e)=>{
-      setInput(e.target.value)
-      countryName.forEach((name) => {
-    const cardParent = document.querySelector(".cardParent");
-    if (name.innerText.toLowerCase().includes(input.toLowerCase)) {
-      cardParent.style.display = "block";
+    const cards = document.getElementsByClassName(".cardParent");
+    console.log(countryName);
+
+
+    const handleKeyup = (e)=>{
+      setInput(e.target.value.toLowerCase())
+      cards.forEach((card) => {
+    if (card.innerText.toLowerCase().includes(input.toLowerCase)) {
+      card.parentElement.parentElement.style.display = "block";
     } else {
-      cardParent.style.display = "none";
+      card.parentElement.parentElement.style.display = "none";
     }
     // console.log(name);
   });
@@ -39,7 +35,7 @@ const [input, setInput]= useState("")
             placeholder="Search country"
             autoComplete="off"
             value={input}
-            onInput={e=> handleInput(e)}
+            onKeyup={e=> handleKeyup(e)}
           />
         </div>
 
