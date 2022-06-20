@@ -27,11 +27,11 @@ const Countries = () => {
           const { name, population, region, capital, flag, numericCode } =
             country;
           return (
-            <article key={numericCode}>
+            <article key={numericCode} className="cardParent">
               <div className="card">
                 <img src={flag} alt={name} />
                 <div className="details">
-                  <h3>{name}</h3>
+                  <h3 className="country-name">{name}</h3>
                   <h4>
                     population: <span>{population}</span>
                   </h4>
