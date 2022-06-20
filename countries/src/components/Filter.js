@@ -4,7 +4,6 @@ function Filter() {
 
 const [input, setInput]= useState("")
 
-    const countryName = document.querySelectorAll(".country-name");
     const cards = document.getElementsByClassName("cardParent");
     console.log(cards);
 
@@ -12,10 +11,10 @@ const [input, setInput]= useState("")
     const handleKeyup = (e)=>{
       setInput(e.target.value.toLowerCase())
       cards.forEach((card) => {
-    if (card.innerText.toLowerCase().includes(input.toLowerCase)) {
-      card.parentElement.parentElement.style.display = "block";
+    if (card.innerText.toLowerCase().includes(input)) {
+      card.style.display = "block";
     } else {
-      card.parentElement.parentElement.style.display = "none";
+      card.style.display = "none";
     }
     // console.log(name);
   });
@@ -34,7 +33,7 @@ const [input, setInput]= useState("")
             placeholder="Search country"
             autoComplete="off"
             value={input}
-            onKeyup={e=> handleKeyup(e)}
+            onKeyUp={(e) => handleKeyup(e)}
           />
         </div>
 
@@ -49,7 +48,6 @@ const [input, setInput]= useState("")
           </select>
         </div>
       </section>
-
     </>
   );
 }
