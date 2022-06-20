@@ -1,13 +1,12 @@
 import React,{useState} from "react";
 
 function Filter() {
+
 const [input, setInput]= useState("")
 
-
-
     const countryName = document.querySelectorAll(".country-name");
-    const cards = document.getElementsByClassName(".cardParent");
-    console.log(countryName);
+    const cards = document.getElementsByClassName("cardParent");
+    console.log(cards);
 
 
     const handleKeyup = (e)=>{
