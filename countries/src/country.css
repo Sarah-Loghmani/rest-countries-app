@@ -40,7 +40,7 @@
 }
 .country article .borders ul li.light-mood {
   background-color: var(--light-card);
-  color:var(--dark-text);
+  color: var(--dark-text);
   box-shadow: 0 5px 8px var(--light-shadow);
 }
 
@@ -52,18 +52,17 @@
     margin: 0px 0 50px 0;
   }
   .country .title h2 {
-   margin-left: 10vmin; 
+    margin-left: 10vmin;
   }
   .country article {
     display: flex;
     align-items: center;
     justify-content: center;
   }
-  .country-details .details{
+  .country-details .details {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-  
   }
 }
 /* @media (min-width: 1200px) {
