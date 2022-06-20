@@ -1,18 +1,47 @@
-import React from "react";
+import React,{useState} from "react";
+// import "../index.css";
 
 function Filter() {
+const [input, setInput]= useState("")
+
+
+  // const input = document.querySelector(".filter searchDiv input");
+  // console.log(input);
+
+  // input.addEventListener("keyup", (e) => {
+    // const value = e.target.value;
+    // const { value } = e.target;
+    // console.log(value);
+    const countryName = document.querySelectorAll(".country-name");
+    const handleInput = (e)=>{
+      setInput(e.target.value)
+      countryName.forEach((name) => {
+    const cardParent = document.querySelector(".cardParent");
+    if (name.innerText.toLowerCase().includes(input.toLowerCase)) {
+      cardParent.style.display = "block";
+    } else {
+      cardParent.style.display = "none";
+    }
+    // console.log(name);
+  });
+
+}
+ 
+
   return (
-    <div>
+    <>
       <section className="filter">
-        <form className="form">
+        <div className="searchDiv">
           <input
             type="search"
             name="search"
             id="search"
-            placeholder="Search for a country"
+            placeholder="Search country"
             autoComplete="off"
+            value={input}
+            onInput={e=> handleInput(e)}
           />
-        </form>
+        </div>
 
         <div className="region-filter">
           <select name="select" id="select" className="select">
@@ -25,7 +54,8 @@ function Filter() {
           </select>
         </div>
       </section>
-    </div>
+
+    </>
   );
 }
 
