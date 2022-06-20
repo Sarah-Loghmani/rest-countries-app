@@ -12,7 +12,7 @@ function Headers() {
     const cards = document.querySelectorAll(".grid article");
 
     const header = document.querySelector(".header");
-    // const input = document.querySelector("input");
+    const input = document.querySelector("input");
     // console.log(input);
     // const regionFilter = document.querySelector(
     //   ".filter .region-filter select"
@@ -31,7 +31,7 @@ function Headers() {
       // iSpan.classList.toggle("darkSpan");
       document.body.classList.toggle("light-mood");
       header.classList.toggle("light-mood");
-      // input.classList.toggle("light-mood");
+      input.classList.toggle("light-mood");
       // regionFilter.classList.toggle("light-mood");
       // regionOptions.forEach((option) => {
       //   option.classList.toggle("light-mood");
