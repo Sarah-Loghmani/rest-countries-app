@@ -66,10 +66,10 @@ header.light-mood {
   justify-content: space-between;
   padding: 20px 0;
 }
-.filter .form {
+.filter .searchDiv {
   width: 100%;
 }
-.filter .form input {
+.filter .searchDiv input {
   background-color: var(--dark-card);
   padding: 12px 18px;
   border: none;
@@ -81,14 +81,14 @@ header.light-mood {
   width: 100%;
   margin: 0 0 30px;
 }
-.filter .form input.light-mood {
+.filter .searchDiv input.light-mood {
   background-color: var(--light-card);
   box-shadow: 0 10px 10px var(--light-shadow);
 }
-.filter .form input::placeholder {
+.filter .searchDiv input::placeholder {
   color: var(--light-text);
 }
-.filter .form input.light-mood::placeholder {
+.filter .searchDiv input.light-mood::placeholder {
   color: var(--dark-text);
 }
 
@@ -190,7 +190,7 @@ header.light-mood {
   .filter {
     flex-direction: row;
   }
-  .filter .form input {
+  .filter .searchDiv input {
     width: 375px;
   }
   .filter .region-filter {
