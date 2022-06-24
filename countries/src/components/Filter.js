@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Filter() {
   const [input, setInput] = useState("");
 
-  const cards = document.querySelectorAll(".cardParent");
+  const cards = document.querySelectorAll(".grid .cardParent .card");
   console.log(cards);
 
   const handleKeyup = (e) => {
@@ -18,9 +18,9 @@ function Filter() {
     });
   };
 
-  const handleSelect= (e) => {
-    
-  }
+  const handleSelect = (e) => {
+    console.log(e.target.value);
+  };
 
   return (
     <>
@@ -33,12 +33,18 @@ function Filter() {
             placeholder="Search country"
             autoComplete="off"
             value={input}
-            onKeyUp={(e) => handleKeyup(e)}
+            onChange={(e) => handleKeyup(e)}
           />
         </div>
 
         <div className="region-filter">
-          <select name="select" id="select" className="select" onChange={(e) => handleSelect(e)}>
+          <select
+            name="select"
+            id="select"
+            className="select"
+            
+            onChange={(e) => handleSelect(e)}
+          >
             <option value="Filter by region">Filter by region</option>
             <option value="Africa">Africa</option>
             <option value="America">America</option>
