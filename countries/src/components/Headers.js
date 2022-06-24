@@ -12,16 +12,17 @@ function Headers() {
     const cards = document.querySelectorAll(".grid article");
 
     const header = document.querySelector(".header");
-    const input = document.querySelector("input");
+    // const input = document.querySelector("input");
     // console.log(input);
-    const regionFilter = document.querySelector(
-      ".filter .region-filter select"
-    );
+    // const regionFilter = document.querySelector(
+    //   ".filter .region-filter select"
+    // );
     const regionOptions = document.querySelectorAll("option");
     const cardsDetails = document.querySelectorAll(".grid .details");
     // country
     const borders = document.querySelectorAll(".borders ul li");
     const backLink = document.querySelector(".backLink");
+    const img = document.querySelector(".country img");
 
     // console.log(sun);
     sun.addEventListener("click", () => {
@@ -39,6 +40,8 @@ function Headers() {
       cards.forEach((card) => card.classList.toggle("light-mood"));
       // country
       borders.forEach((border) => border.classList.toggle("light-mood"));
+      backLink.classList.toggle("light-mood");
+      img.classList.toggle("light-mood");
     });
   };
   return (
