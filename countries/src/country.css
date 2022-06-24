@@ -8,12 +8,21 @@
   margin: 0px 0 20px 0;
   display: inline-block;
   font-size: 3vmin;
+  box-shadow: 0 5px 8px var(--dark-shadow);
 }
 .backLink.light-mood {
   background-color: var(--light-card);
+  color: var(--dark-text);
+  box-shadow: 0 5px 8px var(--light-shadow);
 }
 .country img {
   width: 100%;
+  border-radius: 5px;
+    box-shadow: 0 5px 8px var(--dark-shadow);
+
+}
+.country img.light-mood{
+  box-shadow: 0 5px 8px var(--light-shadow);
 }
 
 .country article .country-details div {
