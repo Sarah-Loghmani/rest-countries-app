@@ -4,19 +4,20 @@ function Filter() {
 
   const [input, setInput] = useState("");
 
-  const cards = document.querySelectorAll(".grid .cardParent .card");
-  console.log(cards);
+  const cards = document.getElementsByClassName("card");
+  console.dir(cards);
 
   const handleInput = (e) => {
     setInput(e.target.value.toLowerCase());
-    cards.forEach((card) => {
-      if (card.innerText.toLowerCase().includes(input)) {
-        card.style.display = "block";
-      } else {
-        card.style.display = "none";
-      }
-      // console.log(name);
-    });
+    console.log(input);
+    // cards.forEach((card) => {
+    //   if (card.innerText.toLowerCase().includes(input)) {
+    //     card.style.display = "block";
+    //   } else {
+    //     card.style.display = "none";
+    //   }
+    //   // console.log(name);
+    // });
   };
 
   const handleSelect = (e) => {
