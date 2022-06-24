@@ -14,10 +14,10 @@ function Headers() {
     const header = document.querySelector(".header");
     const input = document.querySelector("input");
     // console.log(input);
-    // const regionFilter = document.querySelector(
-    //   ".filter .region-filter select"
-    // );
-    // const regionOptions = document.querySelectorAll("option");
+    const regionFilter = document.querySelector(
+      ".filter .region-filter select"
+    );
+    const regionOptions = document.querySelectorAll("option");
     const cardsDetails = document.querySelectorAll(".grid .details");
     // country
     const borders = document.querySelectorAll(".country article .borders ul li");
@@ -32,10 +32,10 @@ function Headers() {
       document.body.classList.toggle("light-mood");
       header.classList.toggle("light-mood");
       input.classList.toggle("light-mood");
-      // regionFilter.classList.toggle("light-mood");
-      // regionOptions.forEach((option) => {
-      //   option.classList.toggle("light-mood");
-      // });
+      regionFilter.classList.toggle("light-mood");
+      regionOptions.forEach((option) => {
+        option.classList.toggle("light-mood");
+      });
       cardsDetails.forEach((detail) => {
         detail.classList.toggle("light-mood");
       });
