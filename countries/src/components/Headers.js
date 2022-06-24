@@ -20,7 +20,8 @@ function Headers() {
     const regionOptions = document.querySelectorAll("option");
     const cardsDetails = document.querySelectorAll(".grid .details");
     // country
-    const borders = document.querySelectorAll(".country article .borders ul li");
+    const borders = document.querySelectorAll(".borders ul li");
+    const backLink = document.querySelector(".backLink");
 
     // console.log(sun);
     sun.addEventListener("click", () => {
@@ -31,21 +32,13 @@ function Headers() {
       // iSpan.classList.toggle("darkSpan");
       document.body.classList.toggle("light-mood");
       header.classList.toggle("light-mood");
-      input.classList.toggle("light-mood");
-      regionFilter.classList.toggle("light-mood");
-      regionOptions.forEach((option) => {
-        option.classList.toggle("light-mood");
-      });
-      cardsDetails.forEach((detail) => {
-        detail.classList.toggle("light-mood");
-      });
-      cards.forEach((card) => {
-        card.classList.toggle("light-mood");
-      });
+      // input.classList.toggle("light-mood");
+      // regionFilter.classList.toggle("light-mood");
+      regionOptions.forEach((option) => option.classList.toggle("light-mood"));
+      cardsDetails.forEach((detail) => detail.classList.toggle("light-mood"));
+      cards.forEach((card) => card.classList.toggle("light-mood"));
       // country
-      borders.forEach((border) => {
-        border.classList.toggle("light-mood");
-      });
+      borders.forEach((border) => border.classList.toggle("light-mood"));
     });
   };
   return (
