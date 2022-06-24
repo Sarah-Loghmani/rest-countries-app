@@ -1,47 +1,54 @@
 import React from "react";
 
 function Headers() {
+
   const handleClick = () => {
+    // * clicked item
     const sun = document.querySelector(".dark-mood");
 
-    // const i = document.querySelector(".header .fa-sun");
-    // console.log(i);
-    // const iSpan = document.querySelector(".dark-mood span");
-    // console.log(iSpan);
-
-    const cards = document.querySelectorAll(".grid article");
-
+    //* header 
     const header = document.querySelector(".header");
+
+    // *filter
+    const regionOptions = document.querySelectorAll("option");
     // const input = document.querySelector("input");
     // console.log(input);
     // const regionFilter = document.querySelector(
     //   ".filter .region-filter select"
     // );
-    const regionOptions = document.querySelectorAll("option");
+
+    // *countries
+    const cards = document.querySelectorAll(".grid article");
     const cardsDetails = document.querySelectorAll(".grid .details");
-    // country
+
+
+    //* country
     const borders = document.querySelectorAll(".borders ul li");
-    const backLink = document.querySelector(".backLink");
-    const img = document.querySelector(".country img");
+    // const backLink = document.querySelector(".backLink");
+    // console.log(backLink);
+    // const img = document.querySelector(".country img");
 
-    // console.log(sun);
+
+    // *add event listener
     sun.addEventListener("click", () => {
-      // i.classList.toggle("fa-sun") &&
-      // i.classList.toggle("fa-moon");
 
-      // iSpan.classList.toggle("lightSpan")
-      // iSpan.classList.toggle("darkSpan");
       document.body.classList.toggle("light-mood");
+      // *header
       header.classList.toggle("light-mood");
       // input.classList.toggle("light-mood");
       // regionFilter.classList.toggle("light-mood");
+
+      // *filter
       regionOptions.forEach((option) => option.classList.toggle("light-mood"));
+
+      // *countries
       cardsDetails.forEach((detail) => detail.classList.toggle("light-mood"));
       cards.forEach((card) => card.classList.toggle("light-mood"));
-      // country
+
+      //* country
       borders.forEach((border) => border.classList.toggle("light-mood"));
-      backLink.classList.toggle("light-mood");
-      img.classList.toggle("light-mood");
+      // backLink.classList.toggle("light-mood");
+      // img.classList.toggle("light-mood");
     });
   };
   return (
