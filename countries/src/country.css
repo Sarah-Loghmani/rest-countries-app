@@ -9,6 +9,9 @@
   display: inline-block;
   font-size: 3vmin;
 }
+.backLink.light-mood {
+  background-color: var(--light-card);
+}
 .country img {
   width: 100%;
 }
@@ -31,14 +34,14 @@
   display: flex;
   flex-wrap: wrap;
 }
-.country article .borders ul li {
+.country .borders ul li {
   background-color: var(--dark-card);
   padding: 2px 20px;
   border-radius: 3px;
   margin: 10px;
   box-shadow: 0 5px 8px var(--dark-shadow);
 }
-.country article .borders ul li.light-mood {
+.country .borders ul li.light-mood {
   background-color: var(--light-card);
   color: var(--dark-text);
   box-shadow: 0 5px 8px var(--light-shadow);
