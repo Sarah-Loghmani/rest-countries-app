@@ -11,8 +11,8 @@ function Headers() {
 
     // *filter
     const regionOptions = document.querySelectorAll("option");
-    // const input = document.querySelector("input");
-    // console.log(input);
+    const input = document.querySelector("input");
+    console.log(input);
     // const regionFilter = document.querySelector(
     //   ".filter .region-filter select"
     // );
@@ -35,7 +35,7 @@ function Headers() {
       document.body.classList.toggle("light-mood");
       // *header
       header.classList.toggle("light-mood");
-      // input.classList.toggle("light-mood");
+      input.classList.toggle("light-mood");
       // regionFilter.classList.toggle("light-mood");
 
       // *filter
