@@ -3,7 +3,8 @@ import React, { useState } from "react";
 function Filter() {
 
   const [input, setInput] = useState("");
-
+ 
+  // countries
   const cards = document.getElementsByClassName("card");
   console.dir(cards);
 
