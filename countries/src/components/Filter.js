@@ -1,26 +1,26 @@
-import React,{useState} from "react";
+import React, { useState } from "react";
 
 function Filter() {
+  const [input, setInput] = useState("");
 
-const [input, setInput]= useState("")
+  const cards = document.querySelectorAll(".cardParent");
+  console.log(cards);
 
-    const cards = document.getElementsByClassName("cardParent");
-    console.log(cards);
+  const handleKeyup = (e) => {
+    setInput(e.target.value.toLowerCase());
+    cards.forEach((card) => {
+      if (card.innerText.toLowerCase().includes(input)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+      // console.log(name);
+    });
+  };
 
-
-    const handleKeyup = (e)=>{
-      setInput(e.target.value.toLowerCase())
-      cards.forEach((card) => {
-    if (card.innerText.toLowerCase().includes(input)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
-    // console.log(name);
-  });
-
-}
- 
+  const handleSelect= (e) => {
+    
+  }
 
   return (
     <>
@@ -38,7 +38,7 @@ const [input, setInput]= useState("")
         </div>
 
         <div className="region-filter">
-          <select name="select" id="select" className="select">
+          <select name="select" id="select" className="select" onChange={(e) => handleSelect(e)}>
             <option value="Filter by region">Filter by region</option>
             <option value="Africa">Africa</option>
             <option value="America">America</option>
