@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 
 function Filter() {
+
   const [input, setInput] = useState("");
 
   const cards = document.querySelectorAll(".grid .cardParent .card");
   console.log(cards);
 
-  const handleKeyup = (e) => {
+  const handleInput = (e) => {
     setInput(e.target.value.toLowerCase());
     cards.forEach((card) => {
       if (card.innerText.toLowerCase().includes(input)) {
@@ -33,7 +34,7 @@ function Filter() {
             placeholder="Search country"
             autoComplete="off"
             value={input}
-            onChange={(e) => handleKeyup(e)}
+            onChange={(e) => handleInput(e)}
           />
         </div>
 
